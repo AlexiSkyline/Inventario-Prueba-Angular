@@ -33,4 +33,11 @@ export class DetalleVentaService {
               });
     }
 
+    eliminarDetalleVentaService( data: DetalleVentas ) {
+        this.http.delete( this.apiURL + '/EliminarDetalleVentas/' + data.id )
+              .subscribe( data => {
+                  this.apiResponse = data as DetalleVentas;
+                  this.getDetalleVentasService();
+              });
+    }
 }
