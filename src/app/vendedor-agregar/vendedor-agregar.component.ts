@@ -7,12 +7,12 @@ import { VendedorService } from '../vendedor.service';
   styleUrls: ['./vendedor-agregar.component.css']
 })
 export class VendedorAgregarComponent implements OnInit {
-
-  constructor() { }
+  constructor( public VendedorService: VendedorService ) { }
 
   ngOnInit(): void {
   }
 
   guardarVendedor() {
+    this.VendedorService.guardaVendedorService();
   }
 }

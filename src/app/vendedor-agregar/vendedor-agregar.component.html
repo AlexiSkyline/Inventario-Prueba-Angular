@@ -1,55 +1,63 @@
 <div>
-    <h1>Agregar proveedor</h1>
+    <h1>Agregar Vendedor</h1>
 
-    <form #form="ngForm">
+    <form #form="ngForm" (ngSubmit)="guardarVendedor()">
         <div class="form-group">
             <label>Nombre:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe el nombre del proveedor" 
-                name="nombre"
+                placeholder="Escribe el nombre del vendedor" 
+                name="nombre" 
+                [(ngModel)]="VendedorService.formData.nombre" 
             />
             <label>Apellidos:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe el apellido del proveedor" 
-                name="apellidos"
+                placeholder="Escribe el apellido del vendedor" 
+                name="apellidos" 
+                [(ngModel)]="VendedorService.formData.apellidos" 
             />
             <label>RFC:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe el RFC del proveedor" 
-                name="rfc"  
+                placeholder="Escribe el RFC del vendedor" 
+                name="rfc" 
+                [(ngModel)]="VendedorService.formData.rfc" 
             />
             <label>Dirección:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe la dirección del proveedor" 
-                name="direccion"
+                placeholder="Escribe la dirección del vendedor" 
+                name="direccion" 
+                [(ngModel)]="VendedorService.formData.direccion" 
             />
             <label>Correo:  </label>
             <input 
                 type="email" 
-                placeholder="Escribe la correo del proveedor" 
-                name="correo"
+                placeholder="Escribe la correo del vendedor" 
+                name="correo" 
+                [(ngModel)]="VendedorService.formData.correo"
             />
             <label>Telefono:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe el Telefono del proveedor" 
+                placeholder="Escribe el Telefono del vendedor" 
                 name="telefono"
+                [(ngModel)]="VendedorService.formData.telefono" 
             />
             <label>Username:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe el UserName del proveedor" 
-                name="userName"
+                placeholder="Escribe el UserName del vendedor" 
+                name="userName" 
+                [(ngModel)]="VendedorService.formData.userName"
             />
             <label>Password:  </label>
             <input 
                 type="password" 
-                placeholder="Escribe el Password del proveedor" 
-                name="password"
+                placeholder="Escribe el Password del vendedor" 
+                name="password" 
+                [(ngModel)]="VendedorService.formData.password"
             />
         </div>
 
@@ -60,7 +68,8 @@
         <input 
             type="text" 
             placeholder="Resultado" 
-            name="resultado"
+            name="resultado" 
+            [(ngModel)]="VendedorService.apiResponse.mensaje"
             readonly
         />
     </form>
