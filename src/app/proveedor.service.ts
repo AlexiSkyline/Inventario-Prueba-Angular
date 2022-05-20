@@ -20,7 +20,7 @@ export class ProveedorService {
               });
     }
 
-    guardaProveedoreService() {
+    guardaProveedorService() {
         this.http.post( this.apiURL + '/InsertarProveedor/', { 
               nombre: this.formData.nombre,
               apellidos: this.formData.apellidos,
@@ -34,7 +34,7 @@ export class ProveedorService {
               });
     }
 
-    eliminarProveedoreService( data: Proveedor ) {
+    eliminarProveedorService( data: Proveedor ) {
         this.http.delete( this.apiURL + '/EliminarProveedor/' + data.id )
               .subscribe( data => {
                   this.apiResponse = data as Proveedor;

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProveedorService } from '../proveedor.service';
+import { Proveedor } from '../../Models/Proveedor';
 
 @Component({
   selector: 'app-proveedor',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProveedorComponent implements OnInit {
 
-  constructor() { }
+  constructor( public ProveedorService: ProveedorService ) { }
 
   ngOnInit(): void {
+    this.ProveedorService.getProveedoresService();
   }
 
+  borrarProveedor( data: Proveedor ) {
+    this.ProveedorService.eliminarProveedorService( data );
+  }
 }
