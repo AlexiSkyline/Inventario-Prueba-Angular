@@ -40,6 +40,10 @@ table tbody tr {
     font-weight: unset;
 }
 
+th:nth-child(6n){
+    display: none;
+}
+
 td input {
     border: none;
     background-color: tomato;

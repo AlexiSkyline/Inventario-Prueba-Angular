@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ArticuloService } from '../articulo.service';
+import { Articulo } from '../../Models/Articulo';
 
 @Component({
   selector: 'app-articulo-agregar',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticuloAgregarComponent implements OnInit {
 
-  constructor() { }
+  constructor( public ArticuloService: ArticuloService ) { }
 
   ngOnInit(): void {
   }
 
+  guardarArticulo() {
+    this.ArticuloService.guardaArticuloService();
+  }
 }

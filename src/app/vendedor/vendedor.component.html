@@ -5,13 +5,13 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>UserName</th>
                 <th>Nombre</th>
                 <th>Apellidos</th>
                 <th>Rfc</th>
                 <th>Direccion<th>
-                <!-- <th>Correo</th> -->
+                <th>Correo</th>
                 <th>Telefono</th>
+                <th>UserName</th>
                 <th>IdDatosGenerales</th>
                 <th>Acciones</th>
             </tr>
@@ -20,13 +20,13 @@
         <tbody>
             <tr *ngFor="let vendedor of VendedorService.listaVendedores">
                 <td>{{ vendedor.id.split('-')[0]  }}</td>
-                <td>{{ vendedor.userName }}</td>
                 <td>{{ vendedor.nombre }}</td>
                 <td>{{ vendedor.apellidos }}</td>
                 <td>{{ vendedor.rfc }}</td>
                 <td>{{ vendedor.direccion }}</td>
                 <td>{{ vendedor.correo }}</td>
                 <td>{{ vendedor.telefono }}</td>
+                <td>{{ vendedor.userName }}</td>
                 <td>{{ vendedor.idDatosGenerales.split('-')[0] }}</td>
                 <td><input type="submit" value="Eliminar" (click)="borrarVendedor( vendedor )"/></td>
             </tr>
