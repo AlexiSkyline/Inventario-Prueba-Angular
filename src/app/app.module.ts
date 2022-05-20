@@ -15,10 +15,9 @@ import { ClienteComponent } from './cliente/cliente.component';
 import { ProveedorComponent } from './proveedor/proveedor.component';
 import { VendedorComponent } from './vendedor/vendedor.component';
 import { ProveedorAgregarComponent } from './proveedor-agregar/proveedor-agregar.component';
+import { ArticuloComponent } from './articulo/articulo.component';
 import { VendedorAgregarComponent } from './vendedor-agregar/vendedor-agregar.component';
 import { ClienteAgregarComponent } from './cliente-agregar/cliente-agregar.component';
-import { ArticuloComponent } from './articulo/articulo.component';
-import { ArticuloGuardarComponent } from './articulo-guardar/articulo-guardar.component';
 import { ArticuloAgregarComponent } from './articulo-agregar/articulo-agregar.component';
 
 @NgModule({
@@ -37,7 +36,6 @@ import { ArticuloAgregarComponent } from './articulo-agregar/articulo-agregar.co
     VendedorAgregarComponent,
     ClienteAgregarComponent,
     ArticuloComponent,
-    ArticuloGuardarComponent,
     ArticuloAgregarComponent
   ],
   imports: [
