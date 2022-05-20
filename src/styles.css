@@ -23,6 +23,7 @@ table {
     margin: 0 auto;
     position: relative;
     text-align: center;
+    font-size: 12px;
 } 
 
 table thead tr {
@@ -64,4 +65,9 @@ td input {
 
 .caja-tabla.grande {
     width: 90%;
+}
+
+td.correo {
+    font-size: 12px;
+    padding-right: 10px;
 }

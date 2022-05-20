@@ -4,12 +4,12 @@
     <table>
         <thead>
             <tr>
-                <th>Clave</th>
+                <th>Id</th>
                 <th>Nombre</th>
                 <th>Apellidos</th>
                 <th>Rfc</th>
                 <th>Direccion<th>
-                <th>Correo</th>
+                <!-- <th>Correo</th> -->
                 <th>Telefono</th>
                 <th>IdDatosGenerales</th>
                 <th>Acciones</th>
@@ -23,7 +23,7 @@
                 <td>{{ proveedores.apellidos }}</td>
                 <td>{{ proveedores.rfc }}</td>
                 <td>{{ proveedores.direccion }}</td>
-                <td>{{ proveedores.correo }}</td>
+                <td class="correo">{{ proveedores.correo }}</td>
                 <td>{{ proveedores.telefono }}</td>
                 <td>{{ proveedores.idDatosGenerales.split('-')[0] }}</td>
                 <td><input type="submit" value="Eliminar" (click)="borrarProveedor( proveedores )"/></td>
