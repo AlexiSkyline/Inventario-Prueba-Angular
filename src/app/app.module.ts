@@ -19,6 +19,8 @@ import { ArticuloComponent } from './articulo/articulo.component';
 import { VendedorAgregarComponent } from './vendedor-agregar/vendedor-agregar.component';
 import { ClienteAgregarComponent } from './cliente-agregar/cliente-agregar.component';
 import { ArticuloAgregarComponent } from './articulo-agregar/articulo-agregar.component';
+import { VentaComponent } from './venta/venta.component';
+import { VentaAgregarComponent } from './venta-agregar/venta-agregar.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { ArticuloAgregarComponent } from './articulo-agregar/articulo-agregar.co
     VendedorAgregarComponent,
     ClienteAgregarComponent,
     ArticuloComponent,
-    ArticuloAgregarComponent
+    ArticuloAgregarComponent,
+    VentaComponent,
+    VentaAgregarComponent
   ],
   imports: [
     BrowserModule,
