@@ -1,1 +1,62 @@
-<p>proveedor-agregar works!</p>
+<div>
+    <h1>Agregar proveedor</h1>
+
+    <form #form="ngForm" (ngSubmit)="guardarProveedor()">
+        <div class="form-group">
+            <label>Nombre:  </label>
+            <input 
+                type="text" 
+                placeholder="Escribe el nombre del proveedor" 
+                name="nombre" 
+                [(ngModel)]="ProveedorService.formData.nombre" 
+            />
+            <label>Apellidos:  </label>
+            <input 
+                type="text" 
+                placeholder="Escribe el apellido del proveedor" 
+                name="apellidos" 
+                [(ngModel)]="ProveedorService.formData.apellidos" 
+            />
+            <label>RFC:  </label>
+            <input 
+                type="text" 
+                placeholder="Escribe el RFC del proveedor" 
+                name="rfc" 
+                [(ngModel)]="ProveedorService.formData.rfc" 
+            />
+            <label>Dirección:  </label>
+            <input 
+                type="text" 
+                placeholder="Escribe la dirección del proveedor" 
+                name="direccion" 
+                [(ngModel)]="ProveedorService.formData.direccion" 
+            />
+            <label>Correo:  </label>
+            <input 
+                type="email" 
+                placeholder="Escribe la correo del proveedor" 
+                name="correo" 
+                [(ngModel)]="ProveedorService.formData.correo"
+            />
+            <label>Telefono:  </label>
+            <input 
+                type="text" 
+                placeholder="Escribe el Telefono del proveedor" 
+                name="telefono"
+                [(ngModel)]="ProveedorService.formData.telefono" 
+            />
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Guardar"/>
+        </div>
+
+        <input 
+            type="text" 
+            placeholder="Resultado" 
+            name="resultado" 
+            [(ngModel)]="ProveedorService.apiResponse.mensaje"
+            readonly
+        />
+    </form>
+</div>

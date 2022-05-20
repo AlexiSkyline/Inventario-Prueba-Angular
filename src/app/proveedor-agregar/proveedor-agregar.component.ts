@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProveedorService } from '../proveedor.service';
 
 @Component({
   selector: 'app-proveedor-agregar',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProveedorAgregarComponent implements OnInit {
 
-  constructor() { }
+  constructor( public ProveedorService: ProveedorService ) { }
 
   ngOnInit(): void {
   }
 
+  guardarProveedor() {
+    this.ProveedorService.guardaProveedorService();
+  }
 }
