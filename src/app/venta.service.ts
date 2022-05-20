@@ -36,4 +36,12 @@ export class VentaService {
                   this.getVentasService();
               });
     }
+
+    eliminarVentaService( data: Ventas ) {
+        this.http.delete( this.apiURL + '/EliminarVentas/' + data.id )
+              .subscribe( data => {
+                  this.apiResponse = data as Ventas;
+                  this.getVentasService();
+              });
+    }
 }
