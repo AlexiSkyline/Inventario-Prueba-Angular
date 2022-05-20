@@ -21,6 +21,8 @@ import { ClienteAgregarComponent } from './cliente-agregar/cliente-agregar.compo
 import { ArticuloAgregarComponent } from './articulo-agregar/articulo-agregar.component';
 import { VentaComponent } from './venta/venta.component';
 import { VentaAgregarComponent } from './venta-agregar/venta-agregar.component';
+import { DetalleVentaAgregarComponent } from './detalle-venta-agregar/detalle-venta-agregar.component';
+import { DetalleVentaComponent } from './detalle-venta/detalle-venta.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { VentaAgregarComponent } from './venta-agregar/venta-agregar.component';
     ArticuloComponent,
     ArticuloAgregarComponent,
     VentaComponent,
-    VentaAgregarComponent
+    VentaAgregarComponent,
+    DetalleVentaAgregarComponent,
+    DetalleVentaComponent
   ],
   imports: [
     BrowserModule,
