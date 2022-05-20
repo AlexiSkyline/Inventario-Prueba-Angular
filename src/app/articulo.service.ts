@@ -19,4 +19,18 @@ export class ArticuloService {
                   this.listaArticulos = data as Articulo[];
               });
     }
+
+    guardaArticuloService() {
+        this.http.post( this.apiURL + '/InsertarArticulo/', { 
+              nombre: this.formData.nombre,
+              descripcion: this.formData.descripcion,
+              idUnidadMedida: this.formData.idUnidadMedida,
+              idMarca: this.formData.idMarca,
+              stock: this.formData.stock,
+              idProveedor: this.formData.idProveedor })
+              .subscribe( data => {
+                  this.apiResponse = data as Articulo;
+                  this.getArticulosService();
+              });
+    }
 }
