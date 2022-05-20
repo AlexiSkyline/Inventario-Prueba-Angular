@@ -1,19 +1,19 @@
-<div>
+<div class="caja-formulario">
     <h1>Agregar Empresa</h1>
 
     <form #form="ngForm" (ngSubmit)="guardarEmpresa()">
         <div class="form-group">
-            <label>Nombre de la empresa:  </label>
+            <label>Nombre:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe el nombre de la empresa" 
+                placeholder="Nombre de la empresa" 
                 name="nombre" 
                 [(ngModel)]="EmpresaService.formData.nombre" 
             />
-            <label>Dirección de la empresa:  </label>
+            <label>Dirección:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe el nombre de la empresa" 
+                placeholder="Dirección de la empresa" 
                 name="direccion" 
                 [(ngModel)]="EmpresaService.formData.direccion" 
             />

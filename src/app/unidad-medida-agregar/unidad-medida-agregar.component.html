@@ -1,12 +1,12 @@
-<div>
+<div class="caja-formulario">
     <h1>Agregar Unidad de Medida</h1>
 
     <form #form="ngForm" (ngSubmit)="guardarUnidadMedida()">
         <div class="form-group">
-            <label>Ingrese el Nombre de la Unidad de Medida:  </label>
+            <label>Descripción:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe la unida de media" 
+                placeholder="Descripción de unida de media" 
                 name="description" 
                 [(ngModel)]="unidadMedidaService.formData.descripcion" 
             />

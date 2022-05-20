@@ -1,4 +1,4 @@
-<div>
+<div class="caja-formulario">
     <h1>Agregar Cliente</h1>
 
     <form #form="ngForm" (ngSubmit)="guardarCliente()">
@@ -6,42 +6,42 @@
             <label>Nombre:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe el nombre del cliente" 
+                placeholder="Nombre del cliente" 
                 name="nombre" 
                 [(ngModel)]="ClienteService.formData.nombre" 
             />
             <label>Apellidos:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe el apellido del cliente" 
+                placeholder="Apellido del cliente" 
                 name="apellidos" 
                 [(ngModel)]="ClienteService.formData.apellidos" 
             />
             <label>RFC:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe el RFC del cliente" 
+                placeholder="RFC del cliente" 
                 name="rfc" 
                 [(ngModel)]="ClienteService.formData.rfc" 
             />
             <label>Dirección:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe la dirección del cliente" 
+                placeholder="Dirección del cliente" 
                 name="direccion" 
                 [(ngModel)]="ClienteService.formData.direccion" 
             />
             <label>Correo:  </label>
             <input 
                 type="email" 
-                placeholder="Escribe la correo del cliente" 
+                placeholder="Correo del cliente" 
                 name="correo" 
                 [(ngModel)]="ClienteService.formData.correo"
             />
             <label>Telefono:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe el Telefono del cliente" 
+                placeholder="Telefono del cliente" 
                 name="telefono"
                 [(ngModel)]="ClienteService.formData.telefono" 
             />

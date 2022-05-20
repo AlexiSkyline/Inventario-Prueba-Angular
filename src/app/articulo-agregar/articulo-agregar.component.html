@@ -1,4 +1,4 @@
-<div>
+<div class="caja-formulario">
     <h1>Agregar Articulo</h1>
 
     <form #form="ngForm" (ngSubmit)="guardarArticulo()">
@@ -6,28 +6,28 @@
             <label>Nombre:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe el nombre del Articulo" 
+                placeholder="Nombre del Articulo" 
                 name="nombre" 
                 [(ngModel)]="ArticuloService.formData.nombre" 
             />
             <label>Descripcion  </label>
             <input 
                 type="text" 
-                placeholder="Escribe la descripcion del Articulo" 
+                placeholder="Descripcion del Articulo" 
                 name="descripcion" 
                 [(ngModel)]="ArticuloService.formData.descripcion" 
             />
             <label>UnidadMedida  </label>
             <input 
                 type="text" 
-                placeholder="Escribe el Id dela UnidadMedida del Articulo" 
+                placeholder="Id de la UnidadMedida del Articulo" 
                 name="idUnidadMedida" 
                 [(ngModel)]="ArticuloService.formData.idUnidadMedida" 
             />
             <label>Marca:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe el Id de la Marca del Articulo" 
+                placeholder="Id de la Marca del Articulo" 
                 name="idMarca" 
                 [(ngModel)]="ArticuloService.formData.idMarca"
             />
@@ -41,7 +41,7 @@
             <label>Proveedor </label>
             <input 
                 type="text" 
-                placeholder="Escribe el Id del Proveedor del Articulo" 
+                placeholder="Id del Proveedor del Articulo" 
                 name="idProveedor"
                 [(ngModel)]="ArticuloService.formData.idProveedor" 
             />

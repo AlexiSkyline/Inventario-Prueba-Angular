@@ -1,12 +1,12 @@
-<div>
+<div class="caja-formulario">
     <h1>Agregar Marca</h1>
 
     <form #form="ngForm" (ngSubmit)="guardarMarca()">
         <div class="form-group">
-            <label>Ingrese la Descripción de la marca:  </label>
+            <label>Descripción:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe la marca" 
+                placeholder="Descripción de la marca" 
                 name="description" 
                 [(ngModel)]="MarcaService.formData.descripcion" 
             />

@@ -51,7 +51,9 @@ td input {
     color: #ffffff;
     padding: 8px 10px;
     border-radius: 5px;
+    cursor: pointer;
 }
+
 .caja-tabla {
     overflow:scroll;
     height: 220px;
@@ -74,4 +76,45 @@ td input {
 td.correo {
     font-size: 12px;
     padding-right: 10px;
+}
+
+.caja-formulario {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.caja-formulario form label {
+    font-size: 15px;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+.caja-formulario form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.caja-formulario form input[type="submit"] {
+    background-color: #434e4e;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.caja-formulario form input[type="submit"]:hover {
+    background-color: #434e4e;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
 }

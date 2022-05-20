@@ -1,4 +1,4 @@
-<div>
+<div class="caja-formulario">
     <h1>Agregar Vendedor</h1>
 
     <form #form="ngForm" (ngSubmit)="guardarVendedor()">
@@ -6,56 +6,56 @@
             <label>Nombre:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe el nombre del vendedor" 
+                placeholder="Nombre del vendedor" 
                 name="nombre" 
                 [(ngModel)]="VendedorService.formData.nombre" 
             />
             <label>Apellidos:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe el apellido del vendedor" 
+                placeholder="Apellido del vendedor" 
                 name="apellidos" 
                 [(ngModel)]="VendedorService.formData.apellidos" 
             />
             <label>RFC:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe el RFC del vendedor" 
+                placeholder="RFC del vendedor" 
                 name="rfc" 
                 [(ngModel)]="VendedorService.formData.rfc" 
             />
             <label>Dirección:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe la dirección del vendedor" 
+                placeholder="Dirección del vendedor" 
                 name="direccion" 
                 [(ngModel)]="VendedorService.formData.direccion" 
             />
             <label>Correo:  </label>
             <input 
                 type="email" 
-                placeholder="Escribe la correo del vendedor" 
+                placeholder="Correo del vendedor" 
                 name="correo" 
                 [(ngModel)]="VendedorService.formData.correo"
             />
             <label>Telefono:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe el Telefono del vendedor" 
+                placeholder="Telefono del vendedor" 
                 name="telefono"
                 [(ngModel)]="VendedorService.formData.telefono" 
             />
             <label>Username:  </label>
             <input 
                 type="text" 
-                placeholder="Escribe el UserName del vendedor" 
+                placeholder="UserName del vendedor" 
                 name="userName" 
                 [(ngModel)]="VendedorService.formData.userName"
             />
             <label>Password:  </label>
             <input 
                 type="password" 
-                placeholder="Escribe el Password del vendedor" 
+                placeholder="Password del vendedor" 
                 name="password" 
                 [(ngModel)]="VendedorService.formData.password"
             />
