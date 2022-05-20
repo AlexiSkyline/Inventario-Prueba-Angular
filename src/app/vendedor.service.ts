@@ -27,7 +27,17 @@ export class VendedorService {
               rfc: this.formData.rfc,
               direccion: this.formData.direccion,
               correo: this.formData.correo,
-              telefono: this.formData.telefono, })
+              telefono: this.formData.telefono,
+              userName: this.formData.userName,
+              password: this.formData.password, })
+              .subscribe( data => {
+                  this.apiResponse = data as Vendedor;
+                  this.getVendedoresService();
+              });
+    }
+
+    eliminarVendedorService( data: Vendedor ) {
+        this.http.delete( this.apiURL + '/EliminarVendedor/' + data.id )
               .subscribe( data => {
                   this.apiResponse = data as Vendedor;
                   this.getVendedoresService();
