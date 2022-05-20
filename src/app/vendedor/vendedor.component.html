@@ -24,6 +24,7 @@
         <td>{{ vendedor.correo }}</td>
         <td>{{ vendedor.telefono }}</td>
         <td>{{ vendedor.idDatosGenerales.split('-')[0] }}</td>
+        <td><input type="submit" value="Eliminar" (click)="borrarVendedor( vendedor )"/></td>
     </tr>
 </table>
 

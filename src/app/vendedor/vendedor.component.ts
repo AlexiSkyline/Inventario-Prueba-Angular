@@ -13,4 +13,8 @@ export class VendedorComponent implements OnInit {
   ngOnInit(): void {
     this.VendedorService.getVendedoresService();
   }
+
+  borrarVendedor( data: Vendedor ) {
+    this.VendedorService.eliminarVendedorService( data );
+  }
 }
