@@ -1,19 +1,25 @@
-<h1>Lista de Marcas</h1>
+<h1>Lista de Empresas</h1>
 
-<table>
-    <tr>
-        <th>Clave</th>
-        <th>Nombre</th>
-        <th>Dirección</th>
-        <th>Acciones</th>
-    </tr>
+<div class="caja-tabla">
+    <table>
+        <thead>
+            <tr>
+                <th>Clave</th>
+                <th>Nombre</th>
+                <th>Dirección</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
 
-    <tr *ngFor="let Empresa of EmpresaService.listaEmpresas">
-        <td>{{ Empresa.id.split('-')[0]  }}</td>
-        <td>{{ Empresa.nombre }}</td>
-        <td>{{ Empresa.direccion }}</td>
-        <td><input type="submit" value="Eliminar" (click)="borrarEmpresa( Empresa )"/></td>
-    </tr>
-</table>
+        <tbody>
+            <tr *ngFor="let Empresa of EmpresaService.listaEmpresas">
+                <td>{{ Empresa.id.split('-')[0]  }}</td>
+                <td>{{ Empresa.nombre }}</td>
+                <td>{{ Empresa.direccion }}</td>
+                <td><input type="submit" value="Eliminar" (click)="borrarEmpresa( Empresa )"/></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 <app-empresa-agregar></app-empresa-agregar>
