@@ -1,1 +1,83 @@
-<p>venta-agregar works!</p>
+<div class="caja-formulario">
+    <h1>Agregar Venta</h1>
+
+    <form #form="ngForm" (ngSubmit)="guardarVenta()">
+        <div class="form-group">
+            <label>Fecha:  </label>
+            <input 
+                type="date" 
+                placeholder="Fecha de la Venta" 
+                name="fecha" 
+                [(ngModel)]="VentaService.formData.fecha" 
+            />
+            <label>Vendedor:  </label>
+            <input 
+                type="text" 
+                placeholder="ID del Vendedor que realiza la Venta" 
+                name="idVendedor" 
+                [(ngModel)]="VentaService.formData.idVendedor" 
+            />
+            <label>Cliente:  </label>
+            <input 
+                type="text" 
+                placeholder="ID del Cliente que realiza la Venta" 
+                name="idCliente" 
+                [(ngModel)]="VentaService.formData.idCliente" 
+            />
+            <label>Folio:  </label>
+            <input 
+                type="number" 
+                placeholder="Folio de la Venta" 
+                name="folio"
+                [(ngModel)]="VentaService.formData.folio" 
+            />
+            <label>Empresa:  </label>
+            <input 
+                type="text" 
+                placeholder="Id Empresa del Venta" 
+                name="idEmpresa" 
+                [(ngModel)]="VentaService.formData.idEmpresa"
+            />
+            <label>Total:  </label>
+            <input 
+                type="number" 
+                placeholder="Total de la Venta" 
+                name="total"
+                [(ngModel)]="VentaService.formData.total" 
+            />
+            <label>IVA:  </label>
+            <input 
+                type="number" 
+                placeholder="IVA de la Venta" 
+                name="iva"
+                [(ngModel)]="VentaService.formData.iva" 
+            />
+            <label>SubTotal:  </label>
+            <input 
+                type="number" 
+                placeholder="SubTotal de la Venta" 
+                name="subTotal"
+                [(ngModel)]="VentaService.formData.subTotal" 
+            />
+            <label>PagoCon:  </label>
+            <input 
+                type="text" 
+                placeholder="Pago Con" 
+                name="pagoCon" 
+                [(ngModel)]="VentaService.formData.pagoCon"
+            />
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Guardar"/>
+        </div>
+
+        <input 
+            type="text" 
+            placeholder="Resultado" 
+            name="resultado" 
+            [(ngModel)]="VentaService.apiResponse.mensaje"
+            readonly
+        />
+    </form>
+</div>
