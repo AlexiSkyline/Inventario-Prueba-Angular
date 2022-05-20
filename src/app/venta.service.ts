@@ -20,4 +20,20 @@ export class VentaService {
               });
     }
 
+    guardaVentaService() {
+        this.http.post( this.apiURL + '/InsertarVenta/', { 
+              fecha: this.formData.fecha,
+              idVendedor: this.formData.idVendedor,
+              idCliente: this.formData.idCliente,
+              folio: this.formData.folio,
+              idEmpresa: this.formData.idEmpresa,
+              total: this.formData.total,
+              iva: this.formData.iva,
+              subTotal: this.formData.subTotal,
+              pagoCon: this.formData.pagoCon })
+              .subscribe( data => {
+                  this.apiResponse = data as Ventas;
+                  this.getVentasService();
+              });
+    }
 }
