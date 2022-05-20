@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VendedorService } from '../vendedor.service';
 
 @Component({
   selector: 'app-vendedor-agregar',
@@ -12,4 +13,6 @@ export class VendedorAgregarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  guardarVendedor() {
+  }
 }
