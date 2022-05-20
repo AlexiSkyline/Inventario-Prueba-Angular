@@ -1,0 +1,17 @@
+<h1>Lista de unidades de medida</h1>
+
+<table>
+    <tr>
+        <th>Clave</th>
+        <th>Descripción</th>
+        <th>Acciones</th>
+    </tr>
+
+    <tr *ngFor="let unidad of unidadMedidaService.listaUnidadesMedidas">
+        <td>{{ unidad.id.split('-')[0]  }}</td>
+        <td>{{ unidad.descripcion }}</td>
+        <td><input type="submit" value="Eliminar" (click)="borrarUnidadMedida(unidad)"/></td>
+    </tr>
+</table>
+
+<app-unidad-medida-agregar></app-unidad-medida-agregar>

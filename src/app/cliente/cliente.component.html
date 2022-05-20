@@ -1,0 +1,29 @@
+<h1>Lista de Clientes</h1>
+
+<table>
+    <tr>
+        <th>Clave</th>
+        <th>Apellidos</th>
+        <th>Nombre</th>
+        <th>Rfc</th>
+        <th>Direccion<th>
+        <th>Correo</th>
+        <th>Telefono</th>
+        <th>IdDatosGenerales</th>
+        <th>Acciones</th>
+    </tr>
+
+    <tr *ngFor="let Cliente of ClienteService.listaClientes">
+        <td>{{ Cliente.id.split('-')[0]  }}</td>
+        <td>{{ Cliente.nombre }}</td>
+        <td>{{ Cliente.apellidos }}</td>
+        <td>{{ Cliente.rfc }}</td>
+        <td>{{ Cliente.direccion }}</td>
+        <td>{{ Cliente.correo }}</td>
+        <td>{{ Cliente.telefono }}</td>
+        <td>{{ Cliente.idDatosGenerales.split('-')[0] }}</td>
+        <td><input type="submit" value="Eliminar" (click)="borrarCliente( Cliente )"/></td>
+    </tr>
+</table>
+
+<app-cliente-agregar></app-cliente-agregar>

@@ -1,0 +1,62 @@
+<div>
+    <h1>Agregar Cliente</h1>
+
+    <form #form="ngForm" (ngSubmit)="guardarCliente()">
+        <div class="form-group">
+            <label>Nombre:  </label>
+            <input 
+                type="text" 
+                placeholder="Escribe el nombre del cliente" 
+                name="nombre" 
+                [(ngModel)]="ClienteService.formData.nombre" 
+            />
+            <label>Apellidos:  </label>
+            <input 
+                type="text" 
+                placeholder="Escribe el apellido del cliente" 
+                name="apellidos" 
+                [(ngModel)]="ClienteService.formData.apellidos" 
+            />
+            <label>RFC:  </label>
+            <input 
+                type="text" 
+                placeholder="Escribe el RFC del cliente" 
+                name="rfc" 
+                [(ngModel)]="ClienteService.formData.rfc" 
+            />
+            <label>Dirección:  </label>
+            <input 
+                type="text" 
+                placeholder="Escribe la dirección del cliente" 
+                name="direccion" 
+                [(ngModel)]="ClienteService.formData.direccion" 
+            />
+            <label>Correo:  </label>
+            <input 
+                type="email" 
+                placeholder="Escribe la correo del cliente" 
+                name="correo" 
+                [(ngModel)]="ClienteService.formData.correo"
+            />
+            <label>Telefono:  </label>
+            <input 
+                type="text" 
+                placeholder="Escribe el Telefono del cliente" 
+                name="telefono"
+                [(ngModel)]="ClienteService.formData.telefono" 
+            />
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Guardar"/>
+        </div>
+
+        <input 
+            type="text" 
+            placeholder="Resultado" 
+            name="resultado" 
+            [(ngModel)]="ClienteService.apiResponse.mensaje"
+            readonly
+        />
+    </form>
+</div>

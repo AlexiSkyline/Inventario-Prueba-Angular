@@ -1,0 +1,13 @@
+a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: black;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}

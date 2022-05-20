@@ -1,0 +1,19 @@
+<h1>Lista de Marcas</h1>
+
+<table>
+    <tr>
+        <th>Clave</th>
+        <th>Nombre</th>
+        <th>Dirección</th>
+        <th>Acciones</th>
+    </tr>
+
+    <tr *ngFor="let Empresa of EmpresaService.listaEmpresas">
+        <td>{{ Empresa.id.split('-')[0]  }}</td>
+        <td>{{ Empresa.nombre }}</td>
+        <td>{{ Empresa.direccion }}</td>
+        <td><input type="submit" value="Eliminar" (click)="borrarEmpresa( Empresa )"/></td>
+    </tr>
+</table>
+
+<app-empresa-agregar></app-empresa-agregar>

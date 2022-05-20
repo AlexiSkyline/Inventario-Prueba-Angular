@@ -1,0 +1,27 @@
+<div>
+    <h1>Agregar Marca</h1>
+
+    <form #form="ngForm" (ngSubmit)="guardarMarca()">
+        <div class="form-group">
+            <label>Ingrese la Descripción de la marca:  </label>
+            <input 
+                type="text" 
+                placeholder="Escribe la marca" 
+                name="description" 
+                [(ngModel)]="MarcaService.formData.descripcion" 
+            />
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Guardar"/>
+        </div>
+
+        <input 
+            type="text" 
+            placeholder="Resultado" 
+            name="resultado" 
+            [(ngModel)]="MarcaService.apiResponse.mensaje"
+            readonly
+        />
+    </form>
+</div>
