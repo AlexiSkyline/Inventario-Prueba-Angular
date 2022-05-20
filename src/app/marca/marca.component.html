@@ -1,17 +1,23 @@
 <h1>Lista de Marcas</h1>
 
-<table>
-    <tr>
-        <th>Clave</th>
-        <th>Descripción</th>
-        <th>Acciones</th>
-    </tr>
-
-    <tr *ngFor="let marca of MarcaService.listaMarcas">
-        <td>{{ marca.id.split('-')[0]  }}</td>
-        <td>{{ marca.descripcion }}</td>
-        <td><input type="submit" value="Eliminar" (click)="borrarMarca( marca )"/></td>
-    </tr>
-</table>
+<div class="caja-tabla">
+    <table>
+        <thead>
+            <tr>
+                <th>Clave</th>
+                <th>Descripción</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr *ngFor="let marca of MarcaService.listaMarcas">
+                <td>{{ marca.id.split('-')[0]  }}</td>
+                <td>{{ marca.descripcion }}</td>
+                <td><input type="submit" value="Eliminar" (click)="borrarMarca( marca )"/></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 <app-marca-agregar></app-marca-agregar>
