@@ -9,4 +9,6 @@ export class Ventas {
     iva: number = 0;
     subTotal: number = 0;
     pagoCon: string = "";
+    exito: boolean = true;
+    mensaje: string = "";
 }

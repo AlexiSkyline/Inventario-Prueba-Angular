@@ -5,4 +5,6 @@ export class DetalleVentas {
     cantidad: number = 0;
     precioCompra: number = 0;
     importe: number = 0;
+    exito: boolean = true;
+    mensaje: string = "";
 }

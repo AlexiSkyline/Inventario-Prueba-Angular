@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DetalleVentaService } from '../detalle-venta.service';
 
 @Component({
   selector: 'app-detalle-venta-agregar',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detalle-venta-agregar.component.css']
 })
 export class DetalleVentaAgregarComponent implements OnInit {
-
-  constructor() { }
+  constructor( public DetalleVentaService: DetalleVentaService ) { }
 
   ngOnInit(): void {
   }
 
+  guardarDetalleVenta() {
+    this.DetalleVentaService.guardaDetalleVentaService();
+  }
 }

@@ -1,1 +1,55 @@
-<p>detalle-venta-agregar works!</p>
+<div class="caja-formulario">
+    <h1>Agregar Detalle Ventas</h1>
+
+    <form #form="ngForm" (ngSubmit)="guardarDetalleVenta()">
+        <div class="form-group">
+            <label>Ventas:  </label>
+            <input 
+                type="text" 
+                placeholder="id de la Venta de la cual se agregara el detalle" 
+                name="idVentas" 
+                [(ngModel)]="DetalleVentaService.formData.idVentas" 
+            />
+            <label>Articulo:  </label>
+            <input 
+                type="text" 
+                placeholder="Id del Articulo que se agregara al detalle" 
+                name="articulo" 
+                [(ngModel)]="DetalleVentaService.formData.idArticulo" 
+            />
+            <label>Cantidad:  </label>
+            <input 
+                type="number" 
+                placeholder="Cantidad del Articulo que se agregara al detalle" 
+                name="cantidad" 
+                [(ngModel)]="DetalleVentaService.formData.cantidad" 
+            />
+            <label>Precio de la Compra:  </label>
+            <input 
+                type="number" 
+                placeholder="Precio de la Compra del Articulo que se agregara al detalle" 
+                name="precioCompra" 
+                [(ngModel)]="DetalleVentaService.formData.precioCompra"
+            />
+            <label>Importe:  </label>
+            <input 
+                type="number" 
+                placeholder="importe de la Compra del Articulo que se agregara al detalle"
+                name="importe" 
+                [(ngModel)]="DetalleVentaService.formData.importe" 
+            />
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Guardar"/>
+        </div>
+
+        <input 
+            type="text" 
+            placeholder="Resultado" 
+            name="resultado" 
+            [(ngModel)]="DetalleVentaService.apiResponse.mensaje"
+            readonly
+        />
+    </form>
+</div>
