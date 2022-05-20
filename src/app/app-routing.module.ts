@@ -6,6 +6,7 @@ import { EmpresaComponent } from './empresa/empresa.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { VendedorComponent } from './vendedor/vendedor.component';
 import { ProveedorComponent } from './proveedor/proveedor.component';
+import { ArticuloComponent } from './articulo/articulo.component';
 
 const routes: Routes = [
   { path: 'UnidadMedida', component: UnidadMedidaComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'Cliente', component: ClienteComponent },
   { path: 'Proveedor', component: ProveedorComponent },
   { path: 'Vendedor', component: VendedorComponent },
+  { path: 'Articulo', component: ArticuloComponent },
 ];
 
 @NgModule({
