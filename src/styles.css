@@ -58,7 +58,10 @@ td input {
     margin: 0 auto;
 }
 
-
 .caja-tabla::-webkit-scrollbar {
     display: none;
+}
+
+.caja-tabla.grande {
+    width: 90%;
 }
