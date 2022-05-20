@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { VentaService } from '../venta.service';
+import { Ventas } from '../../Models/Venta';
 
 @Component({
   selector: 'app-venta',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./venta.component.css']
 })
 export class VentaComponent implements OnInit {
-
-  constructor() { }
+  constructor( public VentaService: VentaService) { }
 
   ngOnInit(): void {
+    this.VentaService.getVentasService();
   }
 
+  borrarVenta( data: Ventas ) {
+    this.VentaService.eliminarVentaService( data );
+  }
 }
