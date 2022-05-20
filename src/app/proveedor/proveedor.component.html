@@ -1,29 +1,35 @@
 <h1>Lista de Proveedores</h1>
 
-<table>
-    <tr>
-        <th>Clave</th>
-        <th>Apellidos</th>
-        <th>Nombre</th>
-        <th>Rfc</th>
-        <th>Direccion<th>
-        <th>Correo</th>
-        <th>Telefono</th>
-        <th>IdDatosGenerales</th>
-        <th>Acciones</th>
-    </tr>
-
-    <tr *ngFor="let proveedores of ProveedorService.listaProveedores">
-        <td>{{ proveedores.id.split('-')[0]  }}</td>
-        <td>{{ proveedores.nombre }}</td>
-        <td>{{ proveedores.apellidos }}</td>
-        <td>{{ proveedores.rfc }}</td>
-        <td>{{ proveedores.direccion }}</td>
-        <td>{{ proveedores.correo }}</td>
-        <td>{{ proveedores.telefono }}</td>
-        <td>{{ proveedores.idDatosGenerales.split('-')[0] }}</td>
-        <td><input type="submit" value="Eliminar" (click)="borrarProveedor( proveedores )"/></td>
-    </tr>
-</table>
+<div class="caja-tabla">
+    <table>
+        <thead>
+            <tr>
+                <th>Clave</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Rfc</th>
+                <th>Direccion<th>
+                <th>Correo</th>
+                <th>Telefono</th>
+                <th>IdDatosGenerales</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr *ngFor="let proveedores of ProveedorService.listaProveedores">
+                <td>{{ proveedores.id.split('-')[0]  }}</td>
+                <td>{{ proveedores.nombre }}</td>
+                <td>{{ proveedores.apellidos }}</td>
+                <td>{{ proveedores.rfc }}</td>
+                <td>{{ proveedores.direccion }}</td>
+                <td>{{ proveedores.correo }}</td>
+                <td>{{ proveedores.telefono }}</td>
+                <td>{{ proveedores.idDatosGenerales.split('-')[0] }}</td>
+                <td><input type="submit" value="Eliminar" (click)="borrarProveedor( proveedores )"/></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 <app-proveedor-agregar></app-proveedor-agregar>
