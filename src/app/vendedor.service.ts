@@ -19,4 +19,18 @@ export class VendedorService {
                   this.listaVendedores = data as Vendedor[];
               });
     }
+
+    guardaVendedorService() {
+        this.http.post( this.apiURL + '/InsertarVendedor/', { 
+              nombre: this.formData.nombre,
+              apellidos: this.formData.apellidos,
+              rfc: this.formData.rfc,
+              direccion: this.formData.direccion,
+              correo: this.formData.correo,
+              telefono: this.formData.telefono, })
+              .subscribe( data => {
+                  this.apiResponse = data as Vendedor;
+                  this.getVendedoresService();
+              });
+    }
 }
