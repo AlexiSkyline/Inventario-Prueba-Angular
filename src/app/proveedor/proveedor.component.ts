@@ -8,7 +8,6 @@ import { Proveedor } from '../../Models/Proveedor';
   styleUrls: ['./proveedor.component.css']
 })
 export class ProveedorComponent implements OnInit {
-
   constructor( public ProveedorService: ProveedorService ) { }
 
   ngOnInit(): void {
