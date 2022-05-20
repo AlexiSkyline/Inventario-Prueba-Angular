@@ -19,4 +19,18 @@ export class DetalleVentaService {
                   this.listaDetalleVentas = data as DetalleVentas[];
               });
     }
+
+    guardaDetalleVentaService() {
+        this.http.post( this.apiURL + '/InsertarDetalleVenta/', { 
+              idVenta: this.formData.idVenta,
+              idArticulo: this.formData.idArticulo,
+              cantidad: this.formData.cantidad,
+              precioCompra: this.formData.precioCompra,
+              importe: this.formData.importe, })
+              .subscribe( data => {
+                  this.apiResponse = data as DetalleVentas;
+                  this.getDetalleVentasService();
+              });
+    }
+
 }
