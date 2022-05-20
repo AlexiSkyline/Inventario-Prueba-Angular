@@ -1,4 +1,4 @@
-export class Ventas {
+export class Venta {
     id: string = "";
     fecha: string = "";
     idVendedor: string = "";

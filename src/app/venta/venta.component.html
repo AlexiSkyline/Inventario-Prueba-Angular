@@ -1,1 +1,40 @@
-<p>venta works!</p>
+<h1>Lista de Ventas Realizadas</h1>
+
+<div class="caja-tabla grande">
+    <table class="tabla">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Fecha</th>
+                <th>IdVendedor</th>
+                <th>IdCliente</th>
+                <th>Folio<th>
+                <th>IdEmpresa</th>
+                <th>Total</th>
+                <th>IVA</th>
+                <th>SubTotal</th>
+                <th>Pago Con</th>
+                <th>Acciones</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr *ngFor="let vanta of VentaService.listaVentas">
+                <td>{{ vanta.id.split('-')[0]  }}</td>
+                <td>{{ vanta.fecha }}</td>
+                <td>{{ vanta.idVendedor.split('-')[0] }}</td>
+                <td>{{ vanta.idCliente.split('-')[0] }}</td>
+                <td>{{ vanta.folio }}</td>
+                <td>{{ vanta.idEmpresa.split('-')[0] }}</td>
+                <td>{{ vanta.total }}</td>
+                <td>{{ vanta.iva }}</td>
+                <td>{{ vanta.subTotal }}</td>
+                <td>{{ vanta.pagoCon }}</td>
+                <td><input type="submit" value="Eliminar" (click)="borrarVenta( vanta )"/></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<app-venta-agregar></app-venta-agregar>

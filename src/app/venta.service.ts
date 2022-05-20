@@ -1,22 +1,22 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Ventas } from '../Models/Venta';
+import { Venta } from '../Models/Venta';
 
 @Injectable({
   providedIn: 'root'
 })
 export class VentaService {
-    public listaVentas: Ventas[] = [];
-    public formData: Ventas = new Ventas;
+    public listaVentas: Venta[] = [];
+    public formData: Venta = new Venta;
     public apiURL: string = 'https://localhost:7249/api/Ventas';
-    public apiResponse: Ventas = new Ventas;
+    public apiResponse: Venta = new Venta;
 
     constructor( public http: HttpClient ) { }
 
     getVentasService() {
         this.http.get( this.apiURL + '/ListarVentas' )
               .subscribe( data => {
-                  this.listaVentas = data as Ventas[];
+                  this.listaVentas = data as Venta[];
               });
     }
 
@@ -32,15 +32,15 @@ export class VentaService {
               subTotal: this.formData.subTotal,
               pagoCon: this.formData.pagoCon })
               .subscribe( data => {
-                  this.apiResponse = data as Ventas;
+                  this.apiResponse = data as Venta;
                   this.getVentasService();
               });
     }
 
-    eliminarVentaService( data: Ventas ) {
+    eliminarVentaService( data: Venta ) {
         this.http.delete( this.apiURL + '/EliminarVentas/' + data.id )
               .subscribe( data => {
-                  this.apiResponse = data as Ventas;
+                  this.apiResponse = data as Venta;
                   this.getVentasService();
               });
     }
