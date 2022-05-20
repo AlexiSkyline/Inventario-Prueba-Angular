@@ -1,1 +1,32 @@
-<p>detalle-venta works!</p>
+<h1>Lista de Empresas</h1>
+
+<div class="caja-tabla">
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>IdVentas</th>
+                <th>IdArticulo</th>
+                <th>Cantidad</th>
+                <th>Precio de Compra</th>
+                <th>Precio de Compra</th>
+                <th>Importe</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let DetalleVentas of DetalleVentaService.listaDetalleVentas">
+                <td>{{ DetalleVentas.id.split('-')[0]  }}</td>
+                <td>{{ DetalleVentas.idVentas.split('-')[0] }}</td>
+                <td>{{ DetalleVentas.idArticulo.split('-')[0] }}</td>
+                <td>{{ DetalleVentas.cantidad }}</td>
+                <td>${{ DetalleVentas.precioCompra }}</td>
+                <td>${{ DetalleVentas.importe }}</td>
+                <td><input type="submit" value="Eliminar" (click)="borrarDetalleVenta( DetalleVentas )"/></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<app-detalle-venta-agregar></app-detalle-venta-agregar>

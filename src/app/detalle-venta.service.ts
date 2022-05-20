@@ -22,7 +22,7 @@ export class DetalleVentaService {
 
     guardaDetalleVentaService() {
         this.http.post( this.apiURL + '/InsertarDetalleVenta/', { 
-              idVenta: this.formData.idVenta,
+              idVentas: this.formData.idVentas,
               idArticulo: this.formData.idArticulo,
               cantidad: this.formData.cantidad,
               precioCompra: this.formData.precioCompra,
