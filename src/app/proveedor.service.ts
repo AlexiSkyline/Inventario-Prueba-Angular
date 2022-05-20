@@ -19,4 +19,18 @@ export class ProveedorService {
                   this.listaProveedores = data as Proveedor[];
               });
     }
+
+    guardaProveedoreservice() {
+        this.http.post( this.apiURL + '/InsertarProveedor/', { 
+              nombre: this.formData.nombre,
+              apellidos: this.formData.apellidos,
+              rfc: this.formData.rfc,
+              direccion: this.formData.direccion,
+              correo: this.formData.correo,
+              telefono: this.formData.telefono, })
+              .subscribe( data => {
+                  this.apiResponse = data as Proveedor;
+                  this.getProveedoresService();
+              });
+    }
 }
