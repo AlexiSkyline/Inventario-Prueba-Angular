@@ -1,1 +1,62 @@
-<p>articulo-agregar works!</p>
+<div>
+    <h1>Agregar Articulo</h1>
+
+    <form #form="ngForm" (ngSubmit)="guardarArticulo()">
+        <div class="form-group">
+            <label>Nombre:  </label>
+            <input 
+                type="text" 
+                placeholder="Escribe el nombre del Articulo" 
+                name="nombre" 
+                [(ngModel)]="ArticuloService.formData.nombre" 
+            />
+            <label>Descripcion  </label>
+            <input 
+                type="text" 
+                placeholder="Escribe la descripcion del Articulo" 
+                name="descripcion" 
+                [(ngModel)]="ArticuloService.formData.descripcion" 
+            />
+            <label>UnidadMedida  </label>
+            <input 
+                type="text" 
+                placeholder="Escribe el Id dela UnidadMedida del Articulo" 
+                name="idUnidadMedida" 
+                [(ngModel)]="ArticuloService.formData.idUnidadMedida" 
+            />
+            <label>Marca:  </label>
+            <input 
+                type="text" 
+                placeholder="Escribe el Id de la Marca del Articulo" 
+                name="idMarca" 
+                [(ngModel)]="ArticuloService.formData.idMarca"
+            />
+            <label>Stock:  </label>
+            <input 
+                type="number" 
+                placeholder="Stock del Articulo" 
+                name="stock"
+                [(ngModel)]="ArticuloService.formData.stock"
+            />
+            <label>Proveedor </label>
+            <input 
+                type="text" 
+                placeholder="Escribe el Id del Proveedor del Articulo" 
+                name="idProveedor"
+                [(ngModel)]="ArticuloService.formData.idProveedor" 
+            />
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Guardar"/>
+        </div>
+
+        <input 
+            type="text" 
+            placeholder="Resultado" 
+            name="resultado" 
+            [(ngModel)]="ArticuloService.apiResponse.mensaje"
+            readonly
+        />
+    </form>
+</div>

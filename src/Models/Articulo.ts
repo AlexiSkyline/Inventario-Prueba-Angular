@@ -6,4 +6,6 @@ export class Articulo {
     idMarca: string = "";
     stock: number = 0;
     idProveedor: string = "";
+    exito: boolean = true;
+    mensaje: string = "";
 }
