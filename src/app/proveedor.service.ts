@@ -20,7 +20,7 @@ export class ProveedorService {
               });
     }
 
-    guardaProveedoreservice() {
+    guardaProveedoreService() {
         this.http.post( this.apiURL + '/InsertarProveedor/', { 
               nombre: this.formData.nombre,
               apellidos: this.formData.apellidos,
@@ -28,6 +28,14 @@ export class ProveedorService {
               direccion: this.formData.direccion,
               correo: this.formData.correo,
               telefono: this.formData.telefono, })
+              .subscribe( data => {
+                  this.apiResponse = data as Proveedor;
+                  this.getProveedoresService();
+              });
+    }
+
+    eliminarProveedoreService( data: Proveedor ) {
+        this.http.delete( this.apiURL + '/EliminarProveedor/' + data.id )
               .subscribe( data => {
                   this.apiResponse = data as Proveedor;
                   this.getProveedoresService();
