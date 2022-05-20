@@ -33,4 +33,12 @@ export class ArticuloService {
                   this.getArticulosService();
               });
     }
+
+    eliminarArticuloService( data: Articulo ) {
+        this.http.delete( this.apiURL + '/EliminarArticulo/' + data.id )
+              .subscribe( data => {
+                  this.apiResponse = data as Articulo;
+                  this.getArticulosService();
+              });
+    }
 }
